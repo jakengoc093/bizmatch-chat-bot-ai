@@ -1,0 +1,66 @@
+.bizmatch-launcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0073aa;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 999999;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+.bizmatch-launcher:hover { transform: scale(1.05); }
+
+.bizmatch-box {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 320px;
+    height: 420px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    flex-direction: column;
+    z-index: 999999;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    overflow: hidden;
+}
+
+.bizmatch-box.pos-left, .bizmatch-launcher.pos-left { right: auto; left: 20px; }
+
+.bizmatch-header { background: #0073aa; color: #fff; padding: 12px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
+.bizmatch-messages { flex: 1; padding: 10px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
+.b-msg { padding: 8px 12px; border-radius: 8px; max-width: 80%; line-height: 1.4; word-wrap: break-word; }
+.b-msg.user { background: #e1f5fe; align-self: flex-end; color: #0277bd; }
+.b-msg.bot { background: #f1f1f1; align-self: flex-start; color: #333; }
+.bizmatch-input-container { display: flex; border-top: 1px solid #eee; padding: 5px; }
+#bizmatch-chat-input { flex: 1; border: none; padding: 8px; outline: none; font-size: 14px; }
+#bizmatch-chat-send { background: #0073aa; color: #fff; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; }
+.b-msg a {
+    color: #0073aa;
+    text-decoration: underline;
+    word-break: break-all;
+}
+.b-msg a:hover {
+    color: #005177;
+}
+/* Căn giữa tuyệt đối cho Launcher và Header */
+.bizmatch-launcher, 
+.bizmatch-header-title {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    line-height: 1 !important;
+}
+
+/* Đảm bảo SVG không bị méo hoặc lệch dòng */
+.bizmatch-bot-icon {
+    display: block;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
