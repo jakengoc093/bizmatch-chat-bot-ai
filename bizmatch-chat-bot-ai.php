@@ -13,8 +13,8 @@ require_once plugin_dir_path(__FILE__) . 'plugin-update-checker/plugin-update-ch
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 // 2. Khởi tạo đối tượng kiểm tra phiên bản
-$bizmatch_update_checker = PucFactory::buildUpdateChecker(
-    'https://github.com/user-github-cua-ban/bizmatch-chat-bot-ai/', // Thay URL GitHub Repo của bạn vào đây
+$myUpdateChecker = YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
+    'https://github.com/jakengoc093/bizmatch-chat-bot-ai/',
     __FILE__,
     'bizmatch-chat-bot-ai'
 );
