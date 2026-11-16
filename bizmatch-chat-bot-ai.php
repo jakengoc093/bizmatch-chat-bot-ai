@@ -3,7 +3,7 @@
  * Plugin Name: Bizmatch Chat Bot AI
  * Plugin URI:  https://ngocnguyen.com.vn/
  * Description: Chatbot Gemini AI tối ưu tốc độ & bảo mật cho WordPress.
- * Version:     2.2
+ * Version:     2.2.1
  * Author:      Ngọc Nguyễn
  * Author URI:  https://ngocnguyen.com.vn/
  * Text Domain: bizmatch-chat-bot-ai
@@ -13,7 +13,11 @@ require_once plugin_dir_path(__FILE__) . 'plugin-update-checker/plugin-update-ch
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
 // 2. Khởi tạo đối tượng kiểm tra phiên bản
+<<<<<<< HEAD
 $myUpdateChecker = YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
+=======
+$bizmatch_update_checker = PucFactory::buildUpdateChecker(
+>>>>>>> 18c15b23c20e5e9aa780d62bfd2db24a1f20f789
     'https://github.com/jakengoc093/bizmatch-chat-bot-ai/',
     __FILE__,
     'bizmatch-chat-bot-ai'
